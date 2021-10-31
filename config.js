@@ -9,6 +9,7 @@ module.exports = function () {
 
     //Maria DB
     cnf_db_host = "localhost";
+    cnf_db_port = "3306";
     cnf_db_user = "";
     cnf_db_password = "";
     cnf_db_database = "";
