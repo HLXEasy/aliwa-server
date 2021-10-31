@@ -8,6 +8,7 @@ class alias_database {
         this.mariadb = require('mariadb');
         this.pool = this.mariadb.createPool({
             host: cnf_db_host,
+            port: cnf_db_port,
             user: cnf_db_user,
             password: cnf_db_password,
             database: cnf_db_database,
