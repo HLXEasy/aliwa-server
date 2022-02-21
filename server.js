@@ -186,7 +186,13 @@ if (cnf_get_alias_prices) {
 //**********************************************
 //start the server for light wallet
 
-const io = require('socket.io')(3000,{pingTimeout: 20000, pingInterval: 2500});
+const io = require('socket.io')(3000,{pingTimeout: 20000, pingInterval: 2500,
+cors:{
+origin:"http://localhost",
+methods:["GET","POST"],
+allowedHeaders:["aliwa-server"],
+credentials:true
+}});
 
 io.on('connection', socket => {
   var address_list=[];
